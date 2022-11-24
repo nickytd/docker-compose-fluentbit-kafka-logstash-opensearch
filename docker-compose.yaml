@@ -37,7 +37,7 @@ services:
   logstash:
     hostname: logstash
     container_name: logstash
-    image: opensearchproject/logstash-oss-with-opensearch-output-plugin:7.16.3
+    image: opensearchproject/logstash-oss-with-opensearch-output-plugin:8.4.0
     volumes:
       - ./pipelines.conf:/usr/share/logstash/pipeline/logstash.conf
     depends_on:
@@ -65,7 +65,7 @@ services:
 
   kafka:
     container_name: kafka
-    image: docker.io/bitnami/kafka:3.1
+    image: docker.io/bitnami/kafka:3.2.3
     ports:
       - "9092:9092"
     volumes:
